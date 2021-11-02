@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding-BootCamp</title>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <link href="css/style.css">
     <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
@@ -365,18 +367,31 @@
                         </li>
 
                         <li class="list-group-item">
-                            <span class="fw-bold"> <i class="fa fa-envelope "></i> Student Email:</span> +233 54 000 1112
-                        </li>
+                            <span class="fw-bold"> <i class="fa fa-envelope "></i> Student Email:</span> codingbootcamp@gmail.com
                     </ul>
                 </div>
+                <div class="col-md">
+
+                    <div id='map' style='width: 600px; height: 320px;'></div>
+
+                </div>
             </div>
-        </div>
     </section>
 
 
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/popper.min.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiY3JlYXRpdmVuYXRoYW4iLCJhIjoiY2t1a2dob3ZjMDk3YjJxbW82NDY1MGZldiJ9.xxoIJ4UyLiM8GSL1P_9bCw';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [-71.060982, 42.35725],
+            zoom: 18
+        });
+    </script>
 </body>
 
 </html>
